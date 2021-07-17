@@ -14,13 +14,27 @@ class CreateNewUser implements CreatesNewUsers
 
     /**
      * Validate and create a newly registered user.
-     *
+     *  AQUÍ SE AGREGÓ EL CAPTCHA
      * @param  array  $input
      * @return \App\Models\User
      */
     public function create(array $input)
     {
         Validator::make($input, [
+
+            //Creamos las reglas para crear el campo de 'nombre de usuario'
+            'name'=>[
+                'required',
+                'string',
+                'max:255'
+            ],
+
+            'username' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique(User::class),
+            ],
            
             'email' => [
                 'required',
@@ -35,6 +49,7 @@ class CreateNewUser implements CreatesNewUsers
 
         return User::create([
             'name' => $input['name'],
+            'username' => $input['username'], //<---Lo creamos para poder devolver el nombre de usuario
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
         ]);

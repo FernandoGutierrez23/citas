@@ -19,8 +19,14 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'username',
         'password',
     ];
+
+    /* SEGUNDA OPCION PARA GUARDAR LOS DATOS
+        proteted $guarded = [];
+        Con este método no tendríamos que estar anotando campo por campo que se agrega a la base de datos
+    */
 
     /**
      * The attributes that should be hidden for arrays.
