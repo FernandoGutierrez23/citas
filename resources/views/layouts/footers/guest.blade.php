@@ -3,23 +3,13 @@
         <nav class="float-left">
         <ul>
             <li>
-            <a href="https://www.creative-tim.com">
-                {{ __('Creative Tim') }}
-            </a>
-            </li>
-            <li>
-            <a href="https://creative-tim.com/presentation">
+            <a href="#">
                 {{ __('Nosotros') }}
             </a>
             </li>
             <li>
-            <a href="http://blog.creative-tim.com">
+            <a href="#">
                 {{ __('Blog') }}
-            </a>
-            </li>
-            <li>
-            <a href="https://www.creative-tim.com/license">
-                {{ __('Licenses') }}
             </a>
             </li>
         </ul>
@@ -28,8 +18,7 @@
         &copy;
         <script>
             document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> by
-        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
+        </script>, Proyecto para la materia de Desarrollo Web Integral
         </div>
     </div>
 </footer>

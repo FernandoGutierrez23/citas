@@ -6,8 +6,8 @@
   -->
   
   <div class="logo">
-    <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('Creative Tim') }}
+    <a href="#" class="simple-text logo-normal">
+      {{ __('GESTOR DE CITAS') }}
     </a>
   </div>
 
@@ -19,6 +19,7 @@
             <p>{{ __('Agenda') }}</p>
         </a>
       </li>
+    <!--  
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
           <i><img style="width:25px" src="{{ asset('/img/laravel.svg') }}"></i>
@@ -43,20 +44,39 @@
           </ul>
         </div>
       </li>
+    -->
       <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('vista-administradores') }}">
-          <i class="material-icons">manage_accounts</i>
-            <p>{{ __('Administradores') }}</p>
+        <a class="nav-link" href="{{ route('add-administradores') }}">
+          <i class="material-icons">group_add</i>
+            <p>{{ __('Nuevo Administrador') }}</p>
+        </a>
+      </li>
+      <li class="nav-item{{ $activePage == 'list-admins' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('users.index') }}">
+          <i class="material-icons">supervisor_account</i>
+          <p>{{ __('Lista de Administradores') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'new-date' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('vista-pacientes') }}">
           <i class="material-icons">face</i>
-            <p>{{ __('Pacientes') }}</p>
+            <p>{{ __('Nuevo Paciente') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'icons' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
+      <li class="nav-item{{ $activePage == 'list-pacientes' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('paciente.index') }}">
+          <i class="material-icons">contact_page</i>
+            <p>{{ __('Lista de Pacientes') }}</p>
+        </a>
+      </li>
+      <li class="nav-item{{ $activePage == 'add-date' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('vista-citas') }}">
+          <i class="material-icons">date_range</i>
+          <p>{{ __('Agregar Cita') }}</p>
+        </a>
+      </li>
+      <li class="nav-item{{ $activePage == 'list-citas' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('cita.index') }}">
           <i class="material-icons">content_paste</i>
           <p>{{ __('Citas') }}</p>
         </a>
@@ -73,14 +93,6 @@
           <p>{{ __('Notificaciones') }}</p>
         </a>
       </li>
-      <!--
-      <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
-          <i class="material-icons">language</i>
-          <p>{{ __('RTL Support') }}</p>
-        </a>
-      </li>
-      -->
     </ul>
   </div>
 </div>

@@ -1,35 +1,24 @@
 <footer class="footer">
-  <div class="container-fluid">
+  <div class="container">
     <nav class="float-left">
-      <ul>
+    <ul>
         <li>
-          <a href="https://www.creative-tim.com">
-              {{ __('Creative Tim') }}
-          </a>
+        <a href="#">
+            {{ __('Nosotros') }}
+        </a>
         </li>
         <li>
-          <a href="https://creative-tim.com/presentation">
-              {{ __('About Us') }}
-          </a>
+        <a href="#">
+            {{ __('Blog') }}
+        </a>
         </li>
-        <li>
-          <a href="http://blog.creative-tim.com">
-              {{ __('Blog') }}
-          </a>
-        </li>
-        <li>
-          <a href="https://www.creative-tim.com/license">
-              {{ __('Licenses') }}
-          </a>
-        </li>
-      </ul>
+    </ul>
     </nav>
     <div class="copyright float-right">
-      &copy;
-      <script>
+    &copy;
+    <script>
         document.write(new Date().getFullYear())
-      </script>, made with <i class="material-icons">favorite</i> by
-      <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
+    </script>, Proyecto para la materia de Desarrollo Web Integral
     </div>
-  </div>
+</div>
 </footer>
